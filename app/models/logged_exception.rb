@@ -1,4 +1,12 @@
 class LoggedException < ActiveRecord::Base
+  attr_accessible :exception_class
+  attr_accessible :controller_name
+  attr_accessible :action_name
+  attr_accessible :message
+  attr_accessible :backtrace
+  attr_accessible :request
+
+
   class << self
     def create_from_exception(controller, exception, data)
       message = exception.message.inspect
