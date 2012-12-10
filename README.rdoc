@@ -37,11 +37,16 @@ Inside your ApplicationController:
 
 === Database Setup
 
-Use
+In order to use the db generator you will need to add the following gems to your gemfile:
+
+    gem 'kaminari'
+    gem 'squeel'
+
+Then you can use
 
   rails g exception_logger:migration
 
-This will create a database migration
+That will create a database migration
 
   TIMESTAMP_add_exception_table.rb
 
